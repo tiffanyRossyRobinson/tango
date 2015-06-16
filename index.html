@@ -23,13 +23,98 @@
           <h1 class="homeHeader lead">What City Best Fits You</h1>
             <p class="lead">You Should Live…</p>
             <p class="lead">
-              <a href="#quizpage" id="begin" class="btn btn-lg btn-default">HERE</a>
+              <a href="#quizpage" id="beginButton" class="btn btn-lg btn-default">HERE</a>
             </p>
     </div>
     </div>
   </div>
 
   <div class="quizPage">
+    <h4> Find What City Best Fits You!</h4>
+    <form class="findMatch">
+
+    <div class="yourInfo">
+      <h6>What do we call you? </h6><input type="text" class="name" value="ex. Doug">
+      <h6>What city do you live in?</h6><input type="text" class="city" value="ex. Charleston">
+    </div>
+    <div class = "dropDowns">
+      <h6>Size City?</h6>
+      <select>
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+      </select>
+      <h6>Preferred Climate?</h6>
+      <select>
+          <option value="warmSummer">Humid Continental (warm summer)</option>
+          <option value="mediterranean">Mediterranean</option>
+          <option value="hotDesert">Hot Desert</option>
+          <option value="humidSubtropical">Humid Subtropical</option>
+          <option value="drySummerSubtropical">Subtropical (dry summer)</option>
+          <option value="drySummerContinental">Continental (dry summer)</option>
+          <option value="alpine">Alpine</option>
+          <option value="semiArid">Semi-Arid</option>
+      </select>
+
+      <h6>Diverse Food?</h6>
+      <select>
+          <option value="yesFood">Yum!</option>
+          <option value="noFood">Nah!</option>
+      </select>
+      <h6>Love Shopping?</h6>
+      <select>
+          <option value="yesShop">Love to Shop!</option>
+          <option value="noShop">I Dont Want to Go Broke</option>
+      </select>
+      <h6>Major League Sports?</h6>
+      <select>
+          <option value="yesShop">Go Team!</option>
+          <option value="noShop">My Wife Doesn't Approve</option>
+      </select>
+    </div>
+    <div class="geography">
+      <form name="myWebForm">
+          <h6>I want to live in a place that has...</h6>
+          <input type="checkbox" class="" value="beach" />Beach<br />
+          <input type="checkbox" class="" value="river" />River<br />
+          <input type="checkbox" class="" value="forest" />Forest<br />
+          <input type="checkbox" class="" value="ocean" />Ocean<br />
+          <input type="checkbox" class="" value="mountains" />Mountains<br />
+          <input type="checkbox" class="" value="canyons" />Canyons<br />
+          <input type="checkbox" class="" value="hills" />Hills<br />
+          <input type="checkbox" class="" value="lake" />Lake<br />
+          <input type="checkbox" class="" value="desert" />Desert<br />
+          <input type="checkbox" class="" value="plains" />Plains<br />
+          <input type="checkbox" class="" value="valleys" />Valleys<br />
+          <input type="checkbox" class="" value="bay" />Bay<br />
+      </form>
+    </div>
+    <div class="activities">
+      <form name="myWebForm">
+          <h6>I want to be able to go... </h6>
+          <input type="checkbox" class="" value="parks" />To Parks<br />
+          <input type="checkbox" class="" value="museums" />To a Museums<br />
+          <input type="checkbox" class="" value="theater" />To a Theater<br />
+          <input type="checkbox" class="" value="tours" />On Tours<br />
+          <input type="checkbox" class="" value="amusementParks" />To an Amusement Parks<br />
+          <input type="checkbox" class="" value="swimming" />Swimming<br />
+          <input type="checkbox" class="" value="surfing" />Surfing<br />
+          <input type="checkbox" class="" value="zooAquarium" />To the Zoo/Aquarium<br />
+          <input type="checkbox" class="" value="watersports" />Play Water Sports<br />
+          <input type="checkbox" class="" value="horsebackRiding" />Horseback Riding<br />
+          <input type="checkbox" class="" value="hiking" />Hiking<br />
+          <input type="checkbox" class="" value="fishing" />Fishing<br />
+          <input type="checkbox" class="" value="mountainBiking" />Mountain Biking<br />
+          <input type="checkbox" class="" value="skiing" />Skiing<br />
+          <input type="checkbox" class="" value="climbing" />Climbing<br />
+          <input type="checkbox" class="" value="rafting" />Rafting<br />
+      </form>
+
+
+    </div>
+  </form>
+
+
   </div>
 
 
@@ -37,6 +122,7 @@
 
   <script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"> </script>
+  <script type="text/javascript" src="data.js"></script>
   <script type="text/javascript" src="templates.js"></script>
   <script type="text/javascript" src="main.js"></script>
 </body>
