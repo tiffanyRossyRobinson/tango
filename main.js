@@ -17,7 +17,7 @@ var page ={
 
   initEvents: function(arguments){
     $('#beginButton').on('click', page.openQuiz);
-    // $('.findMatch').on('click', 'button', page.captureData);
+    $('.submit').on('click', page.captureData);
 
   },
 
@@ -27,9 +27,9 @@ var page ={
     $('.quizPage').addClass('active');
 
   },
-  // captureData: function(){
-  //   console.log('you want to submit your data');
-  // }
+  captureData: function(){
+    console.log('you want to submit your data');
+  }
 
 
 };
