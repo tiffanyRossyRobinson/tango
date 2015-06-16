@@ -1,0 +1,64 @@
+.active {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  font-size: 24px;
+  font-family: Impact, Tahoma;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.siteWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: url('http://tiffzhang.com/startup/img/bg/11.jpg') center fixed;
+  background-size: cover;
+
+}
+
+.navbar {
+  background-color: rgb(26, 60, 154);
+}
+
+.navbar .innner a {
+  text-decoration: none;
+  color: white;
+}
+
+#logo {
+  color: white;
+  letter-spacing: 1.4px;
+  font-size: 3rem;
+  font-family: Tahoma;
+  padding-left: 1%;
+}
+
+.homeHeader {
+  font-size: 8rem;
+  font-family: bold;
+  color: white;
+}
+
+#homeText p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  font-family: Tahoma;
+
+
+}
+
+#homeText p a {
+  background-color: rgb(26, 60, 154);
+  color: white;
+  font-family: tahoma;
+
+}
