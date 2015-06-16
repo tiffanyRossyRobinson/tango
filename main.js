@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
   page.init();
 });
@@ -17,6 +18,6 @@ var page ={
 
   },
 
-  
+
 
 };
