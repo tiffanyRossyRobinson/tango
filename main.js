@@ -17,6 +17,7 @@ var page ={
 
   initEvents: function(arguments){
     $('#beginButton').on('click', page.openQuiz);
+    // $('.findMatch').on('click', 'button', page.captureData);
 
   },
 
@@ -24,7 +25,11 @@ var page ={
     $('.landingPage').removeClass('active');
     $('.landingPage').addClass('hide');
     $('.quizPage').addClass('active');
-  }
+
+  },
+  // captureData: function(){
+  //   console.log('you want to submit your data');
+  // }
 
 
 };
