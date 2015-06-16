@@ -20,6 +20,11 @@ var page ={
 
   },
 
+  openQuiz: function(){
+    $('.landingPage').removeClass('active');
+    $('.landingPage').addClass('hide');
+    $('.quizPage').addClass('active');
+  }
 
 
 };
