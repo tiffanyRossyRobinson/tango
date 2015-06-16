@@ -1,3 +1,4 @@
+
 .quizPage{
   display:none;
 }
@@ -32,6 +33,8 @@
 .hide {
   display: none;
 }
+
+/* ///   Landing Page   ///*/
 
 .landingPage {
   font-size: 24px;
@@ -87,3 +90,9 @@
   background-color: rgb(26, 60, 154);
   color: white;
   font-family: tahoma;
+}
+
+  /*///  Results Page   ///*/
+  li{
+    text-decoration: none;
+  }
