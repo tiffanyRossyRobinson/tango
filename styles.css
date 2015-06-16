@@ -1,4 +1,30 @@
+.quizPage{
+  display:none;
+}
+.yourInfo, .dropDowns, {
+  margin-top: 2%;
+}
 
+.geography,{
+  margin-top: 2%;
+}
+.activities{
+  margin-top: 5%;
+}
+
+.pickSize, .pickClimate{
+  display:inline-block;
+
+}
+
+.pickClimate{
+  margin-left: 2%;
+}
+
+.pickFood, .pickShop, .pickSports{
+  display:inline-block;
+  margin-left: 2%;
+}
 .active {
   display: block;
 }

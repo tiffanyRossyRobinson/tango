@@ -12,9 +12,11 @@ var page ={
 
   initStyling: function(arguments){
 
+
   },
 
   initEvents: function(arguments){
+    $('#beginButton').on('click', page.openQuiz);
 
   },
 
