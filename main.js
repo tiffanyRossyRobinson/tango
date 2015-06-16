@@ -16,7 +16,7 @@ var page ={
   },
 
   initEvents: function(arguments){
-    $('#beginButton').on('click', page.openQuiz);
+    $('#beginButton').on('click', 'a', page.openQuiz);
 
   },
 

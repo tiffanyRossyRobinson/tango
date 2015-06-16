@@ -108,7 +108,7 @@ cities = [
     climate: "warmSummer",
     geography: ["hills", "river", "forest"],
     sports: "yesSports",
-    shopping: "noShop"
+    shopping: "noShop",
     image: "http://www.alsglobal.com/~/media/Images/Divisions/Life%20Sciences/Environmental/Cincinnati.jpg"
   },
   {
