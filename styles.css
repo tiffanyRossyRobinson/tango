@@ -33,7 +33,7 @@
   display: none;
 }
 
-body {
+.landingPage {
   font-size: 24px;
   font-family: Impact, Tahoma;
   box-sizing: border-box;
