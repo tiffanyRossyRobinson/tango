@@ -1,15 +1,34 @@
 .quizPage{
   display:none;
 }
-.yourInfo, .dropDowns, {
-  margin-top: 2%;
+.yourInfo{
+  margin-top: 3%;
 }
 
-.geography,{
-  margin-top: 2%;
+.dropDowns{
+  margin-top: 3%;
+}
+
+.geography{
+  margin-top: 3%;
+
+}
+
+body{
+  background: url('http://tiffzhang.com/startup/img/bg/11.jpg') center fixed;
+}
+
+.quizPage{
+  background-color: grey;
+  margin-top: 5%;
+  border: 2px dashed rgb(26, 60, 154);
+  box-shadow: 10px 10px 10px rgb(26, 60, 154);
+}
+.quizPage h2{
+  text-align: center;
 }
 .activities{
-  margin-top: 5%;
+  margin-top: 10%;
 }
 
 .pickSize, .pickClimate{
@@ -25,8 +44,12 @@
   display:inline-block;
   margin-left: 2%;
 }
-.active {
-  display: block;
+
+.submit{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 30%;
+  margin-left: 30%;
 }
 
 .hide {
@@ -79,7 +102,18 @@
   font-weight: 500;
   color: white;
   font-family: Tahoma;
+}
 
+.results{
+  display:none;
+  background-color: grey;
+  border-radius: 40%;
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  height: 300px;
+  margin-top: 15%;
+  padding-top: 5%;
 
 }
 
@@ -87,3 +121,10 @@
   background-color: rgb(26, 60, 154);
   color: white;
   font-family: tahoma;
+
+}
+
+
+  .active {
+    display: block;
+  }
