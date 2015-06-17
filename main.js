@@ -125,41 +125,47 @@ var page ={
   },
 
   nextQuestion: function(){
-      page.setObject();
-      $('.selectAnswer').empty();
-      if(page.questionOn === 'questionTwo'){
-        questions.map(function(value, i){
-          if(value.name === 'questionTwo'){
-            $('.what').text(value.question);
-            _.each(value.answerChoices, function(e){
-              page.loadTemplate("radioQuestion", e, $('.selectAnswer'));
-            });
-            page.questionOn = value.upNext;
-          };
-        });
-      }
-      else if(page.questionOn === 'depends'){
-        questions.map(function(value, i){
-          if(value.name === page.selectedAnswer){
-            $('.what').text(value.question);
-            _.each(value.answerChoices, function(e){
-              page.loadTemplate("radioQuestion", e, $('.selectAnswer'));
-            });
-            page.questionOn = value.upNext;
-          };
-        });
-      }
-      else if(page.questionOn === 'question6' || page.questionOn === 'question7' || page.questionOn === 'question8' || page.questionOn === 'question9' || page.questionOn === 'question10' || page.questionOn === 'question11' || page.questionOn === 'question12' || page.questionOn === 'question13'){
-          page.checkBoxOnes();
-      }
-      else if(page.questionOn === 'EndOfQuiz'){
-        page.yourObject['activities'] = page.activities;
-        page.filterCities();
-
+      if(page.selectedAnswer === ""){
+        console.log("please select an option: ", page.selectedAnswer);
       }
       else{
-          page.nextOnePlease();
-      }
+            page.setObject();
+            $('.selectAnswer').empty();
+            if(page.questionOn === 'questionTwo'){
+              questions.map(function(value, i){
+                if(value.name === 'questionTwo'){
+                  $('.what').text(value.question);
+                  _.each(value.answerChoices, function(e){
+                    page.loadTemplate("radioQuestion", e, $('.selectAnswer'));
+                  });
+                  page.questionOn = value.upNext;
+                };
+              });
+            }
+            else if(page.questionOn === 'depends'){
+              questions.map(function(value, i){
+                if(value.name === page.selectedAnswer){
+                  $('.what').text(value.question);
+                  _.each(value.answerChoices, function(e){
+                    page.loadTemplate("radioQuestion", e, $('.selectAnswer'));
+                  });
+                  page.questionOn = value.upNext;
+                };
+              });
+              page.selectedAnswer = "";
+            }
+            else if(page.questionOn === 'question6' || page.questionOn === 'question7' || page.questionOn === 'question8' || page.questionOn === 'question9' || page.questionOn === 'question10' || page.questionOn === 'question11' || page.questionOn === 'question12' || page.questionOn === 'question13'){
+                page.checkBoxOnes();
+            }
+            else if(page.questionOn === 'EndOfQuiz'){
+              page.yourObject['activities'] = page.activities;
+              page.filterCities();
+
+            }
+            else{
+                page.nextOnePlease();
+            }
+        }
 
   },
 
@@ -167,24 +173,25 @@ var page ={
   setObject: function(){
     if(page.selectedAnswer === 'small' || page.selectedAnswer ===  'medium' || page.selectedAnswer === 'large'){
       page.yourObject['size'] = page.selectedAnswer;
-      page.selectAnswer = "";
+      page.selectedAnswer = "";
+
     }
     else if(page.selectedAnswer === 'warmSummer' || page.selectedAnswer ===  'hotDesert' || page.selectedAnswer === 'humidSubtropical' || page.selectedAnswer === 'drySummersubtropical' || page.selectedAnswer === 'drySummerContinental' || page.selectedAnswer === 'alpine' || page.selectedAnswer === 'semiarid'){
       page.yourObject['climate'] = page.selectedAnswer;
-      page.selectAnswer = "";
+      page.selectedAnswer = "";
     }
 
     else if(page.selectedAnswer === 'yesFood' || page.selectedAnswer ===  'noFood'){
       page.yourObject['food'] = page.selectedAnswer;
-      page.selectAnswer = "";
+      page.selectedAnswer = "";
     }
     else if(page.selectedAnswer === 'yesShop' || page.selectedAnswer ===  'noShop'){
       page.yourObject['shop'] = page.selectedAnswer;
-      page.selectAnswer = "";
+      page.selectedAnswer = "";
     }
     else if(page.selectedAnswer === 'yesSports' || page.selectedAnswer ===  'noSports'){
       page.yourObject['sports'] = page.selectedAnswer;
-      page.selectAnswer = "";
+      page.selectedAnswer = "";
     }
 
   },
@@ -342,6 +349,7 @@ var page ={
 
               console.log(firstCity);
             };
+          });
 
           _.map(cities, function(value){
             if (value.name === page.topTwo) {
