@@ -321,9 +321,10 @@ var page ={
     },
 
     displayResults: function(){
-          _.map(cities, function(value){
+      var firstCity, secondCity, thirdCity;
+      firstCity = _.map(cities, function(value){
             if(value.name === page.topOne){
-              var firstCity = {};
+              firstCity = {};
               firstCity = {
                 name : value.name,
                 score : page.scoreOne,
@@ -337,42 +338,49 @@ var page ={
                 image : value.image
               };
               console.log(firstCity);
-            };
-            _.template("placeMeResult", firstCity, $('.topOne'))
+              return firstCity;
 
-            if (value.name === page.second) {
-              var secondCity = {};
-              secondCity = {
-                name : value.name,
-                score : page.scoreTwo,
-                size : value.size,
-                activities : value.activities,
-                food : value.food,
-                climate : value.climate,
-                geography : value.geography,
-                sports : value.sports,
-                shopping : value.shopping,
-                image : value.image
-              };
-            };
-            _.template("placeMeResult", secondCity, $('.second'))
+            }
+          });
 
-            if (value.name === page.third) {
-              var thirdCity = {};
-              thirdCity = {
-                name : value.name,
-                score : page.scoreThree,
-                size : value.size,
-                activities : value.activities,
-                food : value.food,
-                climate : value.climate,
-                geography : value.geography,
-                sports : value.sports,
-                shopping : value.shopping,
-                image : value.image
-              };
-            };
-            _.template("placeMeResult", thirdCity, $('.third'))
+      secondCity = _.map(cities, function (value) {
+        if (value.name === page.second) {
+          var secondCity = {};
+          secondCity = {
+            name : value.name,
+            score : page.scoreTwo,
+            size : value.size,
+            activities : value.activities,
+            food : value.food,
+            climate : value.climate,
+            geography : value.geography,
+            sports : value.sports,
+            shopping : value.shopping,
+            image : value.image
+          };
+          return secondCity;
+        }
+
+      });
+      thirdCity = _.map(function(value) {
+        if (value.name === page.third) {
+          var thirdCity = {};
+          thirdCity = {
+            name : value.name,
+            score : page.scoreThree,
+            size : value.size,
+            activities : value.activities,
+            food : value.food,
+            climate : value.climate,
+            geography : value.geography,
+            sports : value.sports,
+            shopping : value.shopping,
+            image : value.image
+          };
+        return thirdCity;
+        }
+
+        _.template("placeMeResult", thirdCity, $('.third'))
           })
        },
 
