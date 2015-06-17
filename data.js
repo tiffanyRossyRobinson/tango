@@ -218,11 +218,11 @@ questions=[
         value: "mediterranean",
       },
       two: {
-        choice: "Subtropical (dry summer)",
+        choice: "Subtropical (Dry Summer)",
         value: "drySummerSubtropical",
       },
       three: {
-        choice: "Continental (dry summer)",
+        choice: "Continental (Dry Summer)",
         value: "drySummerContinental"
       }
     }
@@ -305,7 +305,7 @@ questions=[
         value: "yesSports",
       },
       two: {
-        choice: "My wife doesnt approve...",
+        choice: "My wife doesn't approve...",
         value: "noSports",
       }
     }
@@ -377,7 +377,7 @@ questions=[
         value: "desert",
       },
       two: {
-        choice: "A City with Plains",
+        choice: "A City in the Plains",
         value: "plains",
       },
       three: {
@@ -400,11 +400,11 @@ questions=[
         value: "museums",
       },
       three: {
-        choice: "To a Theater to watch stuff",
+        choice: "To a Theater to watch musicals",
         value: "theater",
       },
       four: {
-        choice: "On Tours to see thing",
+        choice: "On Tours to see things",
         value: "tours",
       }
     }
@@ -412,7 +412,7 @@ questions=[
   {
     name: "question11",
     upNext:"question12",
-    question: "On my spare time I like to... (pick all that apply)",
+    question: "In my spare time I like to... (pick all that apply)",
     answerChoices: {
       one: {
         choice: "Go To Amusement Parks",
@@ -427,7 +427,7 @@ questions=[
         value: "surfing",
       },
       four: {
-        choice: "Visit a Zoo/Aquarium",
+        choice: "Visit a Zoo or Aquarium",
         value: "zooAquarium",
       }
     }
