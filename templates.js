@@ -4,6 +4,7 @@ var templates = {};
 templates.placeMeResult = [
 "<div class='resultHeader col-md-12'>",
 "<h2><%= name %></h2>",
+"<h2><%= score %></h2>",
 "</div>",
 "<div class='resultsContent col-md-12'>",
 "<div id='resultsImage'class='col-md-7'>",
