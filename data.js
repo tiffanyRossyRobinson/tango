@@ -239,6 +239,10 @@ questions=[
       two: {
         choice: "Semi-Arid",
         value: "semiarid",
+      },
+      three: {
+        choice: "Humid Continental (Cool Summer)",
+        value: "coolSummer",
       }
     }
   },
@@ -248,7 +252,7 @@ questions=[
     question: "I would like an environment that is: ",
     answerChoices: {
       one: {
-        choice: "Humid Continental (warm Summer)",
+        choice: "Humid Continental (Warm Summer)",
         value: "warmSummer",
       },
       two: {
