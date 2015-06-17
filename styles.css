@@ -4,6 +4,7 @@
 }
 .yourInfo{
   margin-top: 3%;
+  display: none;
 }
 
 
@@ -20,7 +21,7 @@
 }
 
 body{
-  background: url('http://tiffzhang.com/startup/img/bg/11.jpg') center fixed;
+  background: url('http://isitaccessible.com/wp-content/uploads/2014/10/Road-To-City.jpg') center fixed;
 }
 
 .quizPage{
@@ -57,6 +58,19 @@ body{
   margin-left: 30%;
 }
 
+.what{
+  display:none;
+  margin-top: 10%;
+}
+.selectAnswer{
+  display: none;
+  margin-top: 5%;
+}
+.next{
+  display:none;
+  margin-top: 5%;
+}
+
 /* ///   Landing Page   ///*/
 
 .landingPage {
@@ -72,7 +86,7 @@ body{
   height: 100%;
   top: 0px;
   left: 0px;
-  background: url('http://tiffzhang.com/startup/img/bg/11.jpg') center fixed;
+  background: url('http://isitaccessible.com/wp-content/uploads/2014/10/Road-To-City.jpg') center fixed;
   background-size: cover;
 
 }
@@ -97,13 +111,13 @@ body{
 .homeHeader {
   font-size: 8rem;
   font-family: bold;
-  color: white;
+  color: black;
 }
 
 #homeText p {
   font-size: 1.5rem;
   font-weight: 500;
-  color: white;
+  color: black;
   font-family: Tahoma;
 }
 
@@ -130,8 +144,11 @@ body{
   /*///  Results Page   ///*/
 ul li{
     text-decoration: none;
+}
 
-
+#mapCanvas{
+  width: 1000px;
+  height: 500px;
 }
 
 
