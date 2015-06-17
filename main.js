@@ -40,8 +40,6 @@ var page ={
     $('.next').on('click', page.nextQuestion);
     $('.selectAnswer').on('click', 'input[type=radio]', page.selectChoice);
     $('.selectAnswer').on('click', 'input[type=checkbox]', page.addChecks);
-
-    // $('.submit').on('click', page.createGoogleMap);
   },
 
   openQuiz: function(){
@@ -384,6 +382,7 @@ var page ={
             page.loadTemplate("placeMeResult", page.firstCity, $('.topOne'));
             page.loadTemplate("placeMeResult", page.secondCity, $('.topTwo'));
             page.loadTemplate("placeMeResult", page.thirdCity, $('.topThree'));
+            page.createGoogleMap();
        },
 
     loadTemplate: function (tmplName, data, $target) {
@@ -404,7 +403,7 @@ var page ={
 
       var bounds = new google.maps.LatLngBounds();
 
-      var address = [$('.topOne').text(), $('.topTwo').text(), $('.topThree').text()];
+      var address = [page.topOne, page.topTwo, page.topThree];
 
       var map = new google.maps.Map(mapCanvas, mapOptions);
 
