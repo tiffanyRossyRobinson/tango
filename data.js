@@ -166,4 +166,114 @@ cities = [
     shopping: "noShop",
     image: "http://i1277.photobucket.com/albums/y483/vremeax/Spearfish_apus_zps04e68cfb.jpg~original"
   }
-]
+];
+
+
+var questions=[];
+
+questions=[
+  {
+    name: "questionOne",
+    upNext: "questionTwo",
+    question: "What best describes your personality?",
+    answerChoices: {
+      one:{
+        choice: "I love being around People!",
+        value: "large",
+      },
+      two: {
+        choice: "I sometimes like my time alone",
+        value: "medium",
+      },
+      three: {
+        choice: "Leave me alone",
+        value: "small"
+      }}
+  },
+  {
+    name: "questionTwo",
+    upNext:"depends",
+    question: "I prefer to have weather that has:",
+    answerChoices: {
+      one: {
+        choice: "cold winters so I can make snowmen!",
+        value: "cold",
+      },
+      two: {
+        choice: "weather that is not too hot or cold",
+        value: "moderate",
+      },
+      three: {
+        choice: "lots and lots of sunshine!",
+        value: "hot"
+      }}
+  },
+  {
+    name: "moderate",
+    upNext:"question3",
+    question: "I would like an environment that is: ",
+    answerChoices: {
+      one: {
+        choice: "Mediterranean",
+        value: "mediterranean",
+      },
+      two: {
+        choice: "Subtropical (dry summer)",
+        value: "drySummerSubtropical",
+      },
+      three: {
+        choice: "Continental (dry summer)",
+        value: "drySummerContinental"
+      }
+    }
+  },
+  {
+    name: "cold",
+    upNext:"question3",
+    question: "I would like an environment that is: ",
+    answerChoices: {
+      one: {
+        choice: "Alpine",
+        value: "alpine",
+      },
+      two: {
+        choice: "Semi-Arid",
+        value: "semiarid",
+      }
+    }
+  },
+  {
+    name: "hot",
+    upNext:"question3",
+    question: "I would like an environment that is: ",
+    answerChoices: {
+      one: {
+        choice: "Humid Continental (warm Summer)",
+        value: "warmSummer",
+      },
+      two: {
+        choice: "A Hot Desert (It's Not That Bad!)",
+        value: "hotDesert",
+      },
+      three: {
+        choice: "Humid Subtropical",
+        value: "humidSubtropical",
+      }
+    }
+  },
+  {
+    name: "question3",
+    upNext:"question4",
+    question: "I need a place that has good food! ",
+    answerChoices: {
+      one: {
+        choice: "Absolutely! I love to eat!",
+        value: "yesFood",
+      },
+      two: {
+        choice: "Nah! I have to watch my figure",
+        value: "noFood",
+      }
+    }
+  }
+];

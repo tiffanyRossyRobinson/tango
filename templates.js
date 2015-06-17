@@ -23,3 +23,17 @@ templates.placeMeResult = [
 "</div>",
 "</div>"
 ].join();
+
+templates.radioQuestion= [
+  "<div class='Option'><input type='radio' class='answerChoice' name = 'myChoice' value='<%= value %>'><%= choice %></div>",
+].join();
+
+
+
+
+// Which best describes your personality?
+//
+// -I love being around people  value="largeCity"
+// -I enjoy people company but like time alone  value = "mediumCity"
+// -I a loner value = "smallCity"
+// -I dont really care value= ""
