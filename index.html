@@ -50,6 +50,7 @@
           <h6>Preferred Climate?</h6>
           <select class="myClimate">
               <option value="warmSummer">Humid Continental (warm summer)</option>
+              <option value="coolSummer">Humid Continental (cool summer)</option>
               <option value="mediterranean">Mediterranean</option>
               <option value="hotDesert">Hot Desert</option>
               <option value="humidSubtropical">Humid Subtropical</option>
@@ -151,17 +152,14 @@
       <h3 class= "topOne"></h3>
       <h3 class= "topTwo"></h3>
       <h3 class= "topThree"></h3>
-
+      <div id="mapCanvas"></div>
   </div>
 
-
-
-
-
-  <script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
-  <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"> </script>
-  <script type="text/javascript" src="data.js"></script>
-  <script type="text/javascript" src="templates.js"></script>
-  <script type="text/javascript" src="main.js"></script>
 </body>
+<script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"> </script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript" src="data.js"></script>
+<script type="text/javascript" src="templates.js"></script>
+<script type="text/javascript" src="main.js"></script>
 </html>
