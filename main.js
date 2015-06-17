@@ -321,9 +321,9 @@ var page ={
     },
 
     displayResults: function(){
+      var firstCity = {};
           _.map(cities, function(value){
             if(value.name === page.topOne){
-              var firstCity = {};
               firstCity = {
                 name : value.name,
                 score : page.scoreOne,
@@ -338,7 +338,6 @@ var page ={
               };
               console.log(firstCity);
             };
-            _.template("placeMeResult", firstCity, $('.topOne'))
 
             if (value.name === page.second) {
               var secondCity = {};
@@ -355,7 +354,6 @@ var page ={
                 image : value.image
               };
             };
-            _.template("placeMeResult", secondCity, $('.second'))
 
             if (value.name === page.third) {
               var thirdCity = {};
@@ -372,8 +370,10 @@ var page ={
                 image : value.image
               };
             };
-            _.template("placeMeResult", thirdCity, $('.third'))
           })
+          page.loadTemplate("placeMeResult", firstCity, $('.topOne'))
+          page.loadTemplate("placeMeResult", secondCity, $('.second'))
+          page.loadTemplate("placeMeResult", thirdCity, $('.third'))
        },
 
     loadTemplate: function (tmplName, data, $target) {
