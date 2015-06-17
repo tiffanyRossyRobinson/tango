@@ -33,6 +33,7 @@ var page ={
     $('.submit').on('click', page.captureData);
     $('.next').on('click', page.nextQuestion);
     $('.selectAnswer').on('click', 'input[type=radio]', page.selectChoice);
+    // $('.submit').on('click', page.createGoogleMap);
   },
 
   openQuiz: function(){
@@ -76,6 +77,7 @@ var page ={
   },
 
   nextQuestion: function(){
+    console.log("this is what I have to find: ", page.selectedAnswer);
     if(page.selectedAnswer === 'small' || page.selectedAnswer ===  'medium' || page.selectedAnswer === 'large'){
       page.yourObject['size'] = page.selectedAnswer;
       console.log(page.yourObject);
@@ -88,7 +90,6 @@ var page ={
       page.yourObject['food'] = page.selectedAnswer;
       console.log(page.yourObject);
     }
-
 
 
     $('.selectAnswer').empty();
@@ -240,6 +241,38 @@ var page ={
 
     getTemplate: function (name) {
       return templates[name];
+    },
+
+    createGoogleMap: function () {
+      console.log("I work");
+      var mapCanvas = document.getElementById('mapCanvas');
+      var mapOptions = {
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+
+      var bounds = new google.maps.LatLngBounds();
+
+      var address = [$('.topOne').text(), $('.topTwo').text(), $('.topThree').text()];
+
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+
+    for (var i = 0; i < address.length; i++) {
+      var geocoder = new google.maps.Geocoder();
+      geocoder.geocode({
+        'address': address[i]
+        },
+      function(results, status){
+        if(status == google.maps.GeocoderStatus.OK){
+          var marker = new google.maps.Marker({
+            position: results[0].geometry.location,
+            map: map
+          });
+          bounds.extend(results[0].geometry.location);
+          map.setCenter(bounds.getCenter());
+          map.fitBounds(bounds);
+        }
+      });
+      }
     }
 
 };
