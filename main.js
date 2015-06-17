@@ -19,6 +19,10 @@ var page ={
   questionOn: "",
   selectedAnswer: "",
 
+  firstCity : {},
+  secondCity : {},
+  thirdCity : {},
+
 
   init:function(arguments){
     page.initStyling();
@@ -321,10 +325,11 @@ var page ={
     },
 
     displayResults: function(){
-      var firstCity = {};
+
+
           _.map(cities, function(value){
             if(value.name === page.topOne){
-              firstCity = {
+              page.firstCity = {
                 name : value.name,
                 score : page.scoreOne,
                 size : value.size,
@@ -336,12 +341,13 @@ var page ={
                 shopping : value.shopping,
                 image : value.image
               };
+
               console.log(firstCity);
             };
 
-            if (value.name === page.second) {
-              var secondCity = {};
-              secondCity = {
+          _.map(cities, function(value){
+            if (value.name === page.topTwo) {
+              page.secondCity = {
                 name : value.name,
                 score : page.scoreTwo,
                 size : value.size,
@@ -353,11 +359,13 @@ var page ={
                 shopping : value.shopping,
                 image : value.image
               };
-            };
+              console.log(page.secondCity);
+            }
+          });
 
-            if (value.name === page.third) {
-              var thirdCity = {};
-              thirdCity = {
+          _.map(cities, function(value){
+            if (value.name === page.topThree) {
+              page.thirdCity = {
                 name : value.name,
                 score : page.scoreThree,
                 size : value.size,
@@ -369,11 +377,13 @@ var page ={
                 shopping : value.shopping,
                 image : value.image
               };
+              console.log(page.thirdCity);
             };
-          })
-          page.loadTemplate("placeMeResult", firstCity, $('.topOne'))
-          page.loadTemplate("placeMeResult", secondCity, $('.second'))
-          page.loadTemplate("placeMeResult", thirdCity, $('.third'))
+
+          });
+            page.loadTemplate("placeMeResult", page.firstCity, $('.topOne'));
+            page.loadTemplate("placeMeResult", page.secondCity, $('.topTwo'));
+            page.loadTemplate("placeMeResult", page.thirdCity, $('.topThree'));
        },
 
     loadTemplate: function (tmplName, data, $target) {
