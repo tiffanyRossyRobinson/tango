@@ -29,6 +29,7 @@ var page ={
   initEvents: function(arguments){
     $('#beginButton').on('click', page.openQuiz);
     $('.submit').on('click', page.captureData);
+    $('.submit').on('click', page.createGoogleMap);
   },
 
   openQuiz: function(){
@@ -184,6 +185,38 @@ var page ={
 
     getTemplate: function (name) {
       return templates[name];
+    },
+
+    createGoogleMap: function () {
+      console.log("I work");
+      var mapCanvas = document.getElementById('mapCanvas');
+      var mapOptions = {
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+
+      var bounds = new google.maps.LatLngBounds();
+
+      var address = [$('.topOne').text(), $('.topTwo').text(), $('.topThree').text()];
+
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+
+    for (var i = 0; i < address.length; i++) {
+      var geocoder = new google.maps.Geocoder();
+      geocoder.geocode({
+        'address': address[i]
+        },
+      function(results, status){
+        if(status == google.maps.GeocoderStatus.OK){
+          var marker = new google.maps.Marker({
+            position: results[0].geometry.location,
+            map: map
+          });
+          bounds.extend(results[0].geometry.location);
+          map.setCenter(bounds.getCenter());
+          map.fitBounds(bounds);
+        }
+      });
+      }
     }
 
 };

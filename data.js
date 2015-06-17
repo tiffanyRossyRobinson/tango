@@ -2,7 +2,7 @@ var cities = [];
 
 cities = [
   {
-    name: "New York",
+    name: "New York, NY",
     size: "large",
     activities: ["parks", "museums", "theater", "tours", "amusementParks"],
     food: "yesFood",
@@ -13,7 +13,7 @@ cities = [
     image: "http://media-cdn.tripadvisor.com/media/photo-s/03/9b/2d/f2/new-york-city.jpg"
   },
   {
-    name: "Los Angeles",
+    name: "Los Angeles, CA",
     size: "large",
     activities: ["amusementParks", "museums", "tours", "swimming", "surfing"],
     food: "yesFood",
@@ -24,7 +24,7 @@ cities = [
     image: "http://images.fineartamerica.com/images-medium-large/los-angeles-skyline-neil-kremer.jpg"
   },
   {
-    name: "Chicago",
+    name: "Chicago, IL",
     size: "large",
     activities: ["parks", "zooAquarium", "museums", "watersports", "tours"],
     food: "yesFood",
@@ -35,7 +35,7 @@ cities = [
     image: "http://www.thepinnaclelist.com/wp-content/uploads/2013/08/002-high-hopes-for-luxury-rentals-in-america-windy-city-as-chicago-expects-3600-new-rental-units-by-2014-the-pinnacle-list-tpl-1840-600x375.jpg"
   },
   {
-    name: "Phoenix",
+    name: "Phoenix, AZ",
     size: "large",
     activities: ["horsebackRiding", "hiking", "museums", "tours", "theater"],
     food: "noFood",
@@ -46,7 +46,7 @@ cities = [
     image: "https://c1.staticflickr.com/5/4153/4844939786_17c9c8c9da_b.jpg"
   },
   {
-    name: "Dallas",
+    name: "Dallas, TX",
     size: "large",
     activities: ["museums", "tours", "zooAquarium", "parks", "watersports"],
     food: "yesFood",
@@ -57,7 +57,7 @@ cities = [
     image: "http://img2.10bestmedia.com/Images/Photos/283771/Dallas-----Ultima-Gaina-iStock_54_990x660.jpg"
   },
   {
-    name: "Charleston",
+    name: "Charleston, SC",
     size: "medium",
     activities: ["swimming", "parks", "tours", "watersports", "fishing"],
     food: "yesFood",
@@ -68,7 +68,7 @@ cities = [
     image: "http://www.vanessak.com/CharlestonAerials/Aerial-Photography/Historic-Charleston-SC/i-85Nb4BV/0/L/DSC_3050-2-L.jpg"
   },
   {
-    name: "Eugene",
+    name: "Eugene, OR",
     size: "medium",
     activities: ["mountainBiking", "hiking", "tours", "museums", "fishing"],
     food: "yesFood",
@@ -79,7 +79,7 @@ cities = [
     image: "http://oregonbachfestival.com/uploads/images/obf-festival-main/plan%20your%20visit%20-Eugene-Skyline-by-UpShotz.jpg"
   },
   {
-    name: "Salt Lake City",
+    name: "Salt Lake City, UT",
     size: "medium",
     activities: ["skiing", "hiking", "mountainBiking", "museums", "watersports"],
     food: "yesFood",
@@ -90,7 +90,7 @@ cities = [
     image: "http://ogdenbicyclecouncil.com/scenictour/wp-content/uploads/ISLC2259_Doug-Pulsipher.jpg"
   },
   {
-    name: "El Paso",
+    name: "El Paso, TX",
     size: "medium",
     activities: ["hiking", "mountainBiking", "zooAquarium", "museums", "climbing"],
     food: "yesFood",
@@ -101,9 +101,9 @@ cities = [
     image: "http://static.wixstatic.com/media/3b53f5_3dbf8868d019484da33de23a33a832c1.jpg"
   },
   {
-    name: "Cincinnati",
+    name: "Cincinnati, OH",
     size: "medium",
-    activities: ["zooAquarium", "museums", "theater", "parks", "watersports"],
+    activities: ["zooAquarium", "museums", "theater", "parks", "amusementParks"],
     food: "noFood",
     climate: "warmSummer",
     geography: ["hills", "river", "forest"],
@@ -112,7 +112,7 @@ cities = [
     image: "http://www.alsglobal.com/~/media/Images/Divisions/Life%20Sciences/Environmental/Cincinnati.jpg"
   },
   {
-    name: "Northfield",
+    name: "Northfield, MN",
     size: "small",
     activities: ["mountainBiking", "museums", "fishing", "hiking"],
     food: "noFood",
@@ -123,7 +123,7 @@ cities = [
     image: "http://nddc.org/i/f/2010/11/Downtown_Northfield_Shopping_District.jpg"
   },
   {
-    name: "Lebanon",
+    name: "Lebanon, NH",
     size: "small",
     activities: ["theater", "fishing", "hiking"],
     food: "noFood",
@@ -134,7 +134,7 @@ cities = [
     image: "https://upload.wikimedia.org/wikipedia/commons/2/24/Downtown_Lebanon_5.JPG"
   },
   {
-    name: "Hood River",
+    name: "Hood River, OR",
     size: "small",
     activities: ["hiking", "fishing", "mountainBiking", "rafting"],
     food: "noFood",
@@ -145,7 +145,7 @@ cities = [
     image: "http://www.farmstandgorge.com/uploads/_HoodRiver_best.jpg"
   },
   {
-    name: "Port Angeles",
+    name: "Port Angeles, WA",
     size: "small",
     activities: ["hiking", "mountainBiking", "fishing", "rafting", "watersports"],
     food: "noFood",
@@ -156,7 +156,7 @@ cities = [
     image: "https://upload.wikimedia.org/wikipedia/commons/7/7c/Portangeles_washington.jpg"
   },
   {
-    name: "Spearfish",
+    name: "Spearfish, SD",
     size: "small",
     activities: ["zooAquarium", "fishing", "hiking", "museums"],
     food: "noFood",
