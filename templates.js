@@ -29,7 +29,9 @@ templates.radioQuestion= [
   "<div class='Option'><input type='radio' class='answerChoice' name = 'myChoice' value='<%= value %>'>&nbsp;&nbsp;&nbsp;<%= choice %></div>",
 ].join();
 
-
+templates.checkQuestion= [
+  "<div class='Option'><input type='checkbox' class='answerChoice' name='myChecks' value='<%= value %>'><%= choice %></div>",
+].join();
 
 
 // Which best describes your personality?
