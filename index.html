@@ -31,124 +31,29 @@
 
   <div class="quizPage container">
     <h2> Find What City Best Fits You!</h2>
-    <form class="findMatch">
+    <div class="findMatch">
+      <h5 class="what"></h5>
+      <form class="selectAnswer">
 
-    <div class="yourInfo">
-      <h6>What do we call you? </h6><input type="text" class="name" placeholder="ex. Doug">
-      <h6>What city do you live in?</h6><input type="text" class="city" placeholder="ex. Charleston">
-    </div>
-    <div class = "dropDowns">
-      <div class="pickSize">
-          <h6>Size City?</h6>
-          <select class="mySize">
-              <option value="small">Small</option>
-              <option value="medium">Medium</option>
-              <option value="large">Large</option>
-          </select>
-      </div>
-      <div class="pickClimate">
-          <h6>Preferred Climate?</h6>
-          <select class="myClimate">
-              <option value="warmSummer">Humid Continental (warm summer)</option>
-              <option value="mediterranean">Mediterranean</option>
-              <option value="hotDesert">Hot Desert</option>
-              <option value="humidSubtropical">Humid Subtropical</option>
-              <option value="drySummerSubtropical">Subtropical (dry summer)</option>
-              <option value="drySummerContinental">Continental (dry summer)</option>
-              <option value="alpine">Alpine</option>
-              <option value="semiArid">Semi-Arid</option>
-          </select>
-      </div>
 
-      <div class="pickFood">
-          <h6>Diverse Food?</h6>
-          <select class="myFood">
-              <option value="yesFood">Yum!</option>
-              <option value="noFood">Nah!</option>
-          </select>
-      </div>
-      <div class="pickShop">
-          <h6>Love Shopping?</h6>
-          <select class="myShop">
-              <option value="yesShop">Love to Shop!</option>
-              <option value="noShop">I Dont Want to Go Broke</option>
-          </select>
-      </div>
-      <div class="pickSports">
-          <h6>Major League Sports?</h6>
-          <select class="mySports">
-              <option value="yesSports">Go Team!</option>
-              <option value="noSports">My Wife Doesn't Approve</option>
-          </select>
-      </div>
-    </div>
-  </form>
-
-    <div class="geography">
-      <form class="mygeography">
-
-          <h6>I want to live in a place that has...</h6>
-          <div class="col-md-3">
-              <input type="checkbox" class="col-md-1" value="beach" />A Beach<br />
-              <input type="checkbox" class="col-md-1" value="river" />A River<br />
-              <input type="checkbox" class="col-md-1" value="forest" />A Forest<br />
+      </form>
+      <button type="button " class="next btn btn-primary">and I...</button>
+        <div class="yourInfo">
+          <h6>What do we call you? </h6><input type="text" class="name" placeholder="ex. Doug">
+          <h6>What city do you live in?</h6><input type="text" class="city" placeholder="ex. Charleston">
+          <button type="button " class="submit btn btn-primary">Where Do I Belong?</button>
         </div>
-        <div class="col-md-3">
-              <input type="checkbox" class="col-md-1" value="ocean" />An Ocean<br />
-              <input type="checkbox" class="col-md-1" value="mountains" />Mountains<br />
-              <input type="checkbox" class="col-md-1" value="canyons" />Canyons<br />
-        </div>
-
-          <div class="col-md-3">
-              <input type="checkbox" class="col-md-1" value="hills" />Hills<br />
-              <input type="checkbox" class="col-md-1" value="lake" />A Lake<br />
-              <input type="checkbox" class="col-md-1" value="desert" />A Desert<br />
-          </div>
-          <div class="col-md-3">
-              <input type="checkbox" class="col-md-1" value="plains" />Plains<br />
-              <input type="checkbox" class="col-md-1" value="valleys" />Valleys<br />
-              <input type="checkbox" class="col-md-1" value="bay" />A Bay<br />
-        </div>
-    </form>
     </div>
-<div class="activities">
-  <form class="myActivities">
-      <h6>I want to be able to go... </h6>
-      <div class="col-md-3">
-            <input type="checkbox" class="col-md-1" value="parks" />To Parks<br />
-            <input type="checkbox" class="col-md-1" value="museums" />To a Museums<br />
-            <input type="checkbox" class="col-md-1" value="theater" />To a Theater<br />
-            <input type="checkbox" class="col-md-1" value="tours" />On Tours<br />
-      </div>
-        <div class="col-md-3">
-            <input type="checkbox" class="col-md-1" value="amusementParks" />To an Amusement Parks<br />
-            <input type="checkbox" class="col-md-1" value="swimming" />Swimming<br />
-            <input type="checkbox" class="col-md-1" value="surfing" />Surfing<br />
-            <input type="checkbox" class="col-md-1" value="zooAquarium" />To the Zoo/Aquarium<br />
-      </div>
-            <div class="col-md-3">
-            <input type="checkbox" class="col-md-1" value="watersports" />Play Water Sports<br />
-            <input type="checkbox" class="col-md-1" value="horsebackRiding" />Horseback Riding<br />
-            <input type="checkbox" class="col-md-1" value="hiking" />Hiking<br />
-            <input type="checkbox" class="col-md-1" value="fishing" />Fishing<br />
-      </div>
-      <div class="col-md-3">
-            <input type="checkbox" class="col-md-1" value="mountainBiking" />Mountain Biking<br />
-            <input type="checkbox" class="col-md-1" value="skiing" />Skiing<br />
-            <input type="checkbox" class="col-md-1" value="climbing" />Climbing<br />
-            <input type="checkbox" class="col-md-1" value="rafting" />Rafting<br />
-      </div>
-    </form>
   </div>
 
-    <button type="button " class="submit btn btn-primary">Where Do I Belong?</button>
-  </div>
 
   <div class="results">
       <h3 class= "topOne"></h3>
       <h3 class= "topTwo"></h3>
       <h3 class= "topThree"></h3>
+
   </div>
+
 
 
 

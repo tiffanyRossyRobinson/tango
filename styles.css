@@ -1,10 +1,16 @@
+
 .quizPage{
   display:none;
 }
 .yourInfo{
   margin-top: 3%;
+  display: none;
 }
 
+
+.geography{
+  margin-top: 2%;
+}
 .dropDowns{
   margin-top: 3%;
 }
@@ -52,9 +58,20 @@ body{
   margin-left: 30%;
 }
 
-.hide {
-  display: none;
+.what{
+  display:none;
+  margin-top: 10%;
 }
+.selectAnswer{
+  display: none;
+  margin-top: 5%;
+}
+.next{
+  display:none;
+  margin-top: 5%;
+}
+
+/* ///   Landing Page   ///*/
 
 .landingPage {
   font-size: 24px;
@@ -124,7 +141,19 @@ body{
 
 }
 
+  /*///  Results Page   ///*/
+ul li{
+    text-decoration: none;
+
+
+}
+
 
   .active {
     display: block;
+
+  }
+
+  .hide {
+    display: none;
   }
