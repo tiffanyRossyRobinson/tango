@@ -248,6 +248,62 @@ var page ={
       page.results();
     },
 
+    displayResults: function(){
+          _.map(cities, function(value){
+            if(value.name === page.topOne){
+              var firstCity = {};
+              firstCity = {
+                name : value.name,
+                score : page.scoreOne,
+                size : value.size,
+                activities : value.activities,
+                food : value.food,
+                climate : value.climate,
+                geography : value.geography,
+                sports : value.sports,
+                shopping : value.shopping,
+                image : value.image
+              };
+              console.log(firstCity);
+            };
+            _.template("placeMeResult", firstCity, $('.topOne'))
+
+            if (value.name === page.second) {
+              var secondCity = {};
+              secondCity = {
+                name : value.name,
+                score : page.scoreTwo,
+                size : value.size,
+                activities : value.activities,
+                food : value.food,
+                climate : value.climate,
+                geography : value.geography,
+                sports : value.sports,
+                shopping : value.shopping,
+                image : value.image
+              };
+            };
+            _.template("placeMeResult", secondCity, $('.second'))
+
+            if (value.name === page.third) {
+              var thirdCity = {};
+              thirdCity = {
+                name : value.name,
+                score : page.scoreThree,
+                size : value.size,
+                activities : value.activities,
+                food : value.food,
+                climate : value.climate,
+                geography : value.geography,
+                sports : value.sports,
+                shopping : value.shopping,
+                image : value.image
+              };
+            };
+            _.template("placeMeResult", thirdCity, $('.third'))
+          })
+       },
+
     loadTemplate: function (tmplName, data, $target) {
       var compiledTmpl = _.template(page.getTemplate(tmplName));
       $target.append(compiledTmpl(data));
