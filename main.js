@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
   page.init();
 });
@@ -19,6 +18,10 @@ var page ={
   questionOn: "",
   selectedAnswer: "",
 
+  firstCity : {},
+  secondCity : {},
+  thirdCity : {},
+
 
   init:function(arguments){
     page.initStyling();
@@ -36,8 +39,6 @@ var page ={
     $('.next').on('click', page.nextQuestion);
     $('.selectAnswer').on('click', 'input[type=radio]', page.selectChoice);
     $('.selectAnswer').on('click', 'input[type=checkbox]', page.addChecks);
-
-    // $('.submit').on('click', page.createGoogleMap);
   },
 
   openQuiz: function(){
@@ -321,11 +322,10 @@ var page ={
     },
 
     displayResults: function(){
-      var firstCity, secondCity, thirdCity;
-      firstCity = _.map(cities, function(value){
+
+          _.map(cities, function(value){
             if(value.name === page.topOne){
-              firstCity = {};
-              firstCity = {
+              page.firstCity = {
                 name : value.name,
                 score : page.scoreOne,
                 size : value.size,
@@ -337,51 +337,48 @@ var page ={
                 shopping : value.shopping,
                 image : value.image
               };
-              console.log(firstCity);
-              return firstCity;
-
+              console.log(page.firstCity);
+            }
+          });
+          _.map(cities, function(value){
+            if (value.name === page.topTwo) {
+              page.secondCity = {
+                name : value.name,
+                score : page.scoreTwo,
+                size : value.size,
+                activities : value.activities,
+                food : value.food,
+                climate : value.climate,
+                geography : value.geography,
+                sports : value.sports,
+                shopping : value.shopping,
+                image : value.image
+              };
+              console.log(page.secondCity);
             }
           });
 
-      secondCity = _.map(cities, function (value) {
-        if (value.name === page.second) {
-          var secondCity = {};
-          secondCity = {
-            name : value.name,
-            score : page.scoreTwo,
-            size : value.size,
-            activities : value.activities,
-            food : value.food,
-            climate : value.climate,
-            geography : value.geography,
-            sports : value.sports,
-            shopping : value.shopping,
-            image : value.image
-          };
-          return secondCity;
-        }
-
-      });
-      thirdCity = _.map(function(value) {
-        if (value.name === page.third) {
-          var thirdCity = {};
-          thirdCity = {
-            name : value.name,
-            score : page.scoreThree,
-            size : value.size,
-            activities : value.activities,
-            food : value.food,
-            climate : value.climate,
-            geography : value.geography,
-            sports : value.sports,
-            shopping : value.shopping,
-            image : value.image
-          };
-        return thirdCity;
-        }
-
-        _.template("placeMeResult", thirdCity, $('.third'))
-          })
+          _.map(cities, function(value){
+            if (value.name === page.topThree) {
+              page.thirdCity = {
+                name : value.name,
+                score : page.scoreThree,
+                size : value.size,
+                activities : value.activities,
+                food : value.food,
+                climate : value.climate,
+                geography : value.geography,
+                sports : value.sports,
+                shopping : value.shopping,
+                image : value.image
+              };
+              console.log(page.thirdCity);
+            };
+          });
+            page.loadTemplate("placeMeResult", page.firstCity, $('.topOne'));
+            page.loadTemplate("placeMeResult", page.secondCity, $('.topTwo'));
+            page.loadTemplate("placeMeResult", page.thirdCity, $('.topThree'));
+            page.createGoogleMap();
        },
 
     loadTemplate: function (tmplName, data, $target) {
@@ -402,7 +399,7 @@ var page ={
 
       var bounds = new google.maps.LatLngBounds();
 
-      var address = [$('.topOne').text(), $('.topTwo').text(), $('.topThree').text()];
+      var address = [page.topOne, page.topTwo, page.topThree];
 
       var map = new google.maps.Map(mapCanvas, mapOptions);
 
