@@ -74,25 +74,12 @@ var page ={
 
   selectChoice: function(){
     page.selectedAnswer= $(this).attr('value');
+
   },
 
   nextQuestion: function(){
-    console.log("this is what I have to find: ", page.selectedAnswer);
-    if(page.selectedAnswer === 'small' || page.selectedAnswer ===  'medium' || page.selectedAnswer === 'large'){
-      page.yourObject['size'] = page.selectedAnswer;
-      console.log(page.yourObject);
-    }
-    else if(page.selectedAnswer === 'warmSummer' || page.selectedAnswer ===  'hotDesert' || page.selectedAnswer === 'humidSubtropical' || page.selectedAnswer === 'drySummersubtropical' || page.selectedAnswer === 'drySummerContinental' || page.selectedAnswer === 'alpine' || page.selectedAnswer === 'semiArid'){
-      page.yourObject['climate'] = page.selectedAnswer;
-      console.log(page.yourObject);
-    }
-    else if(page.selectedAnswer === 'yesFood' || page.selectedAnswer ===  'noFood'){
-      page.yourObject['food'] = page.selectedAnswer;
-      console.log(page.yourObject);
-    }
-
-
-    $('.selectAnswer').empty();
+      page.setObject();
+      $('.selectAnswer').empty();
       if(page.questionOn === 'questionTwo'){
         questions.map(function(value, i){
           if(value.name === 'questionTwo'){
@@ -116,17 +103,44 @@ var page ={
         });
       }
       else{
-        questions.map(function(value, i){
-          if(value.name === page.questionOn){
-            $('.what').text(value.question);
-            _.each(value.answerChoices, function(e){
-              page.loadTemplate("radioQuestion", e, $('.selectAnswer'));
-            });
-            page.questionOn = value.upNext;
-          };
-        });
+          page.nextOnePlease();
       }
 
+  },
+
+
+  setObject: function(){
+    if(page.selectedAnswer === 'small' || page.selectedAnswer ===  'medium' || page.selectedAnswer === 'large'){
+      page.yourObject['size'] = page.selectedAnswer;
+      console.log(page.yourObject);
+    }
+    else if(page.selectedAnswer === 'warmSummer' || page.selectedAnswer ===  'hotDesert' || page.selectedAnswer === 'humidSubtropical' || page.selectedAnswer === 'drySummersubtropical' || page.selectedAnswer === 'drySummerContinental' || page.selectedAnswer === 'alpine' || page.selectedAnswer === 'semiArid'){
+      page.yourObject['climate'] = page.selectedAnswer;
+      console.log(page.yourObject);
+    }
+    else if(page.selectedAnswer === 'yesFood' || page.selectedAnswer ===  'noFood'){
+      page.yourObject['food'] = page.selectedAnswer;
+      console.log(page.yourObject);
+    }
+    else if(page.selectedAnswer === 'yesShop' || page.selectedAnswer ===  'noShop'){
+      page.yourObject['shop'] = page.selectedAnswer;
+      console.log(page.yourObject);
+    }
+
+
+  },
+  nextOnePlease: function(){
+    var goTo= "";
+    questions.map(function(value, i){
+      if(value.name === page.questionOn){
+        $('.what').text(value.question);
+        _.each(value.answerChoices, function(e){
+          page.loadTemplate("radioQuestion", e, $('.selectAnswer'));
+        });
+          goTo= value.upNext;
+      };
+    });
+    page.questionOn = goTo;
   },
 
 

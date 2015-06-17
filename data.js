@@ -275,5 +275,22 @@ questions=[
         value: "noFood",
       }
     }
+  },
+  {
+    name: "question4",
+    upNext:"question5",
+    question: "Having good Shopping nearby is very important to me!",
+    answerChoices: {
+      one: {
+        choice: "Uh Yes! I love to Shop!",
+        value: "yesShop",
+      },
+      two: {
+        choice: "No!!! I dont want to go broke!",
+        value: "noShop",
+      }
+    }
   }
+
+
 ];
