@@ -5,6 +5,7 @@
 .yourInfo{
   margin-top: 3%;
   display: none;
+  text-align: center;
 }
 
 
@@ -20,17 +21,18 @@
 
 }
 
-body{
-  background: url('http://isitaccessible.com/wp-content/uploads/2014/10/Road-To-City.jpg') center fixed;
-}
+/* body{
+  background: url('http://img.mi9.com/landscape/5005/beautiful-bridges-wallpaper-free-cooper-river-bridge_2560x1600_93607.jpg') center fixed;
+  background-size: cover;
+} */
 
 .quizPage{
-  background-color: grey;
-  margin-top: 5%;
-  border: 2px dashed rgb(26, 60, 154);
-  box-shadow: 10px 10px 10px rgb(26, 60, 154);
+  background-color: #A9DBFF;
+  margin-top: 125px;
+  border: 2px solid #8588FF;
+  box-shadow: 1px 5px 22px 6px #003F6B;
 }
-.quizPage h2{
+.quizPage h1{
   text-align: center;
 }
 .activities{
@@ -55,90 +57,137 @@ body{
   margin-top: 5%;
   margin-bottom: 5%;
   width: 30%;
-  margin-left: 30%;
 }
 
 .what{
   display:none;
-  margin-top: 10%;
+  margin-top: 40px;
 }
 .selectAnswer{
   display: none;
   margin-top: 5%;
 }
+
+.Option{
+  margin: 5px;
+  font-size: 1.25em;
+}
+
 .next{
   display:none;
+  margin: auto;
   margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
 }
 
 /* ///   Landing Page   ///*/
 
 .landingPage {
   font-size: 24px;
-  font-family: Impact, Tahoma;
+  font-family: 'Yellowtail', cursive;
   box-sizing: border-box;
   text-align: center;
 }
 
+video#bgvid {
+position: fixed;
+top: 50%;
+left: 50%;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -100;
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+background: url('http://img.mi9.com/landscape/5005/beautiful-bridges-wallpaper-free-cooper-river-bridge_2560x1600_93607.jpg') no-repeat;
+background-size: cover;
+}
+
 .siteWrapper {
+  text-align: center;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0px;
   left: 0px;
-  background: url('http://isitaccessible.com/wp-content/uploads/2014/10/Road-To-City.jpg') center fixed;
-  background-size: cover;
-
 }
 
 .navbar {
-  background-color: rgb(26, 60, 154);
+  background-color: #109CFF;
+  text-align: center;
 }
 
-.navbar .innner a {
+.innner a {
   text-decoration: none;
   color: white;
+}
+
+.inner a:hover{
+  text-decoration: none;
 }
 
 #logo {
   color: white;
   letter-spacing: 1.4px;
-  font-size: 3rem;
-  font-family: Tahoma;
+  font-size: 10rem;
+  font-family: 'Yellowtail', cursive;
   padding-left: 1%;
 }
 
 .homeHeader {
   font-size: 8rem;
-  font-family: bold;
-  color: black;
+  font-family: sans-serif;
+  color: white;
+}
+
+#homeText{
+  margin-top:350px;
 }
 
 #homeText p {
-  font-size: 1.5rem;
+  font-size: 5rem;
   font-weight: 500;
-  color: black;
-  font-family: Tahoma;
+  color: white;
+  font-family: 'Yellowtail', cursive;
+}
+
+#beginButton{
+  background-color: #109CFF;
+  color: white;
+  font-family: 'Yellowtail', cursive;
+  font-size: 4rem;
+  border-color: #A9DBFF;
+}
+
+#beginButton:hover{
+  text-decoration: none;
+  border-color: #A9DBFF;
+}
+
+.findMatch{
+  text-align: center;
 }
 
 .results{
   display:none;
-  background-color: grey;
-  border-radius: 40%;
-  width: 60%;
+  background-color: #A9DBFF;
   margin: auto;
   text-align: center;
-  height: 300px;
-  margin-top: 15%;
-  padding-top: 5%;
-
+  margin-top: 125px;
+  padding: 15px;
+  height: 525px;
+  width: 1050px;
+  border: 2px solid #8588FF;
+  box-shadow: 1px 5px 22px 6px #003F6B
 }
 
-#homeText p a {
-  background-color: rgb(26, 60, 154);
-  color: white;
-  font-family: tahoma;
-
+{
+  background-color: #A9DBFF;
+  margin-top: 125px;
+  border: 2px solid #8588FF;
+  box-shadow: 1px 5px 22px 6px #003F6B;
 }
 
   /*///  Results Page   ///*/
