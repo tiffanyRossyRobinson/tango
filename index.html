@@ -5,41 +5,45 @@
   <title>PlaceMe</title>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+  <link href='http://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
 
+  <div class="navbar clearfix">
+    <div class="inner">
+      <a href="#home">
+        <h3 id="logo"><i class="fa fa-street-view"></i>PlaceMe</h3>
+      </a>
+    </div>
+  </div>
+
   <div class="landingPage active">
     <div class="siteWrapper">
-      <div class="navbar clearfix">
-        <div class="inner">
-          <a href="#home">
-            <h3 id="logo"><i class="fa fa-street-view"></i>PlaceMe</h3>
-          </a>
-        </div>
-    </div>
-
-    <div id="homeText" class="center-block">
-          <h1 class="homeHeader lead">What City Best Fits You</h1>
-            <p class="lead">You Should Live…</p>
-            <p class="lead">
-              <a href="#quizpage" id="beginButton" class="btn btn-lg btn-default">HERE</a>
-            </p>
-    </div>
+      <div id="homeText" class="center-block">
+        <video autoplay loop id="bgvid">
+          <source src="http://static.videezy.com/system/resources/previews/000/002/648/original/kuala-lumpur-timelapse.mp4" type="video/webm">
+          <source src="http://static.videezy.com/system/resources/previews/000/002/648/original/kuala-lumpur-timelapse.mp4" type="video/mp4">
+        </video>
+        <h1 class="homeHeader lead">FIND THE CITY THAT FITS YOU</h1>
+        <p class="lead">
+          <a href="#quizpage" id="beginButton" class="btn btn-lg btn-default">You should live...</a>
+        </p>
+      </div>
     </div>
   </div>
 
   <div class="quizPage container">
-    <h2> Find What City Best Fits You!</h2>
+    <h1> Find the city that fits you!</h1>
     <div class="findMatch">
-      <h5 class="what"></h5>
+      <h3 class="what"></h3>
       <form class="selectAnswer">
 
       </form>
-      <button type="button " class="next btn btn-primary">and I...</button>
+      <button type="button" class="next btn btn-primary">and I...</button>
         <div class="yourInfo">
-          <h6>What do we call you? </h6><input type="text" class="name" placeholder="ex. Doug">
-          <h6>What city do you live in?</h6><input type="text" class="city" placeholder="ex. Charleston">
+          <p><h3>What do we call you?</h3><input type="text" class="name" placeholder="First name..."></p>
+          <p><h3>What city do you live in?</h3><input type="text" class="city" placeholder="Current location..."></p>
           <button type="button " class="submit btn btn-primary">Where Do I Belong?</button>
         </div>
       </div>
