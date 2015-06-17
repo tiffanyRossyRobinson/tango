@@ -1,8 +1,9 @@
+
 var templates = {};
 
 templates.placeMeResult = [
 "<div class='resultHeader col-md-12'>",
-"<%= name %>",
+"<h2><%= name %></h2>",
 "</div>",
 "<div class='resultsContent col-md-12'>",
 "<div id='resultsImage'class='col-md-7'>",
@@ -21,4 +22,4 @@ templates.placeMeResult = [
 "</ul>",
 "</div>",
 "</div>"
-].join("");
+].join();
