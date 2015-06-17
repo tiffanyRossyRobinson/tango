@@ -1,3 +1,4 @@
+
 .quizPage{
   display:none;
 }
@@ -5,6 +6,10 @@
   margin-top: 3%;
 }
 
+
+.geography{
+  margin-top: 2%;
+}
 .dropDowns{
   margin-top: 3%;
 }
@@ -52,9 +57,7 @@ body{
   margin-left: 30%;
 }
 
-.hide {
-  display: none;
-}
+/* ///   Landing Page   ///*/
 
 .landingPage {
   font-size: 24px;
@@ -124,7 +127,19 @@ body{
 
 }
 
+  /*///  Results Page   ///*/
+ul li{
+    text-decoration: none;
+
+
+}
+
 
   .active {
     display: block;
+
+  }
+
+  .hide {
+    display: none;
   }

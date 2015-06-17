@@ -6,6 +6,7 @@ $(document).ready(function(){
 var page ={
 
   yourObject: {},
+
   yourScore: {},
   topOne: "",
   scoreOne: 0,
@@ -13,6 +14,7 @@ var page ={
   scoreTwo: 0,
   topThree: "",
   scoreThree: 0,
+
 
   init:function(arguments){
     page.initStyling();
@@ -27,7 +29,6 @@ var page ={
   initEvents: function(arguments){
     $('#beginButton').on('click', page.openQuiz);
     $('.submit').on('click', page.captureData);
-
   },
 
   openQuiz: function(){
