@@ -6,6 +6,13 @@ $(document).ready(function(){
 var page ={
 
   yourObject: {},
+  yourScore: {},
+  topOne: "",
+  scoreOne: 0,
+  topTwo: "",
+  scoreTwo: 0,
+  topThree: "",
+  scoreThree: 0,
 
   init:function(arguments){
     page.initStyling();
@@ -39,7 +46,7 @@ var page ={
     var sports= $('.mySports').val();
     var geography= [];
     var activities= [];
-    $('.findMatch input:checked').each(function() {
+    $('.mygeography input:checked').each(function() {
       geography.push(this.value);
     });
 
@@ -62,7 +69,120 @@ var page ={
 
     console.log(page.yourObject);
 
-  }
+    page.filterCities();
 
+  },
+
+  filterCities: function(){
+    var score = cities.map(function(value){
+      page.yourScore[value.name]= 0;
+      _.each(value, function(e, i){
+        if(i === 'size'){
+          if(e === page.yourObject.size){
+            page.yourScore[value.name] += 1;
+          }
+        }
+        if(i === 'activities'){
+          _.each(page.yourObject.activities, function(e){
+            _.each(value.activities, function(el){
+                if(e === el){
+                  page.yourScore[value.name] += 1;
+                };
+            });
+          });
+        }
+        if(i === 'food'){
+          if(e === page.yourObject.food){
+            page.yourScore[value.name] += 1;
+          }
+        }
+        if(i === 'climate'){
+          if(e === page.yourObject.climate){
+            page.yourScore[value.name] += 1;
+          }
+        }
+
+        if( i === 'geography'){
+          _.each(page.yourObject.geography, function(e){
+            _.each(value.geography, function(el){
+                if(e === el){
+                  page.yourScore[value.name] += 1;
+                };
+            });
+          });
+        }
+        if( i === 'sports'){
+          if(e === page.yourObject.sports){
+            page.yourScore[value.name] += 1;
+          };
+        };
+        if( i === 'shopping'){
+          if(e === page.yourObject.shopping){
+            page.yourScore[value.name] += 1;
+          };
+        };
+
+      });
+
+    });
+    console.log('this is your score: ', page.yourScore);
+    page.topOne();
+  },
+
+  topOne: function(){
+    _.each(page.yourScore, function(e, i){
+          if(e > page.scoreOne){
+            page.topOne = i;
+            page.scoreOne = e;
+          }
+      });
+      console.log("this is the highest city: ", page.topOne);
+      delete page.yourScore[page.topOne];
+      $('.results').addClass('active');
+      $('.topOne').text("First Result: " + page.topOne);
+      page.second();
+    },
+
+    second: function(){
+      _.each(page.yourScore, function(e, i){
+            if(e > page.scoreTwo){
+              page.topTwo = i;
+              page.scoreTwo = e;
+            }
+        });
+        console.log("this is the second highest city: ", page.topTwo);
+        delete page.yourScore[page.topTwo];
+        $('.topTwo').text("Second Result: " + page.topTwo);
+        page.third();
+    },
+
+    third: function(){
+      _.each(page.yourScore, function(e, i){
+            if(e > page.scoreThree){
+              page.topThree = i;
+              page.scoreThree = e;
+            }
+        });
+        console.log("this is the third highest city: ", page.topThree);
+        delete page.yourScore[page.topThree];
+        $('.topThree').text("Third Result: " + page.topThree);
+        page.hideForm();
+    },
+
+    hideForm: function(){
+      page.yourScore = {};
+      page.yourObject= {};
+      $('.quizPage').removeClass('active');
+
+    },
+
+    loadTemplate: function (tmplName, data, $target) {
+      var compiledTmpl = _.template(page.getTemplate(tmplName));
+      $target.append(compiledTmpl(data));
+    },
+
+    getTemplate: function (name) {
+      return templates[name];
+    }
 
 };
