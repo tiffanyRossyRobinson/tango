@@ -290,6 +290,189 @@ questions=[
         value: "noShop",
       }
     }
+  },
+  {
+    name: "question5",
+    upNext:"question6",
+    question: "I want a major league team in my area!",
+    answerChoices: {
+      one: {
+        choice: "Yes! Go Team!",
+        value: "yesSports",
+      },
+      two: {
+        choice: "My wife doesnt approve...",
+        value: "noSports",
+      }
+    }
+  },
+  {
+    name: "question6",
+    upNext:"question7",
+    question: "I like water so I want to be near... (pick all that apply)",
+    answerChoices: {
+      one: {
+        choice: "A Beach",
+        value: "beach",
+      },
+      two: {
+        choice: "A River",
+        value: "river",
+      },
+      three: {
+        choice: "An Ocean",
+        value: "ocean",
+      }
+    }
+  },
+  {
+    name: "question7",
+    upNext:"question8",
+    question: "I think it would be so nice to live by... (pick all that apply)",
+    answerChoices: {
+      one: {
+        choice: "Hills",
+        value: "hills",
+      },
+      two: {
+        choice: "Mountains",
+        value: "mountains",
+      },
+      three: {
+        choice: "Canyons",
+        value: "canyons",
+      }
+    }
+  },
+  {
+    name: "question8",
+    upNext:"question9",
+    question: "Send me to a place that has... (pick all that apply)",
+    answerChoices: {
+      one: {
+        choice: "A Forest",
+        value: "forest",
+      },
+      two: {
+        choice: "A Lake",
+        value: "lake",
+      },
+      three: {
+        choice: "A Bay",
+        value: "bay",
+      }
+    }
+  },
+  {
+    name: "question9",
+    upNext:"question10",
+    question: "It would be cool to live in ... (pick all that apply)",
+    answerChoices: {
+      one: {
+        choice: "A Desert",
+        value: "desert",
+      },
+      two: {
+        choice: "A City with Plains",
+        value: "plains",
+      },
+      three: {
+        choice: "A Place with Valleys",
+        value: "valleys",
+      }
+    }
+  },
+  {
+    name: "question10",
+    upNext:"question11",
+    question: "I want to be able to go... (pick all that apply)",
+    answerChoices: {
+      one: {
+        choice: "To Parks to play!",
+        value: "parks",
+      },
+      two: {
+        choice: "To Museums to see things",
+        value: "museums",
+      },
+      three: {
+        choice: "To a Theater to watch stuff",
+        value: "theater",
+      },
+      four: {
+        choice: "On Tours to see thing",
+        value: "tours",
+      }
+    }
+  },
+  {
+    name: "question11",
+    upNext:"question12",
+    question: "On my spare time I like to... (pick all that apply)",
+    answerChoices: {
+      one: {
+        choice: "Go To Amusement Parks",
+        value: "amusementParks",
+      },
+      two: {
+        choice: "Go Swimming",
+        value: "swimming",
+      },
+      three: {
+        choice: "Be able to Surf",
+        value: "surfing",
+      },
+      four: {
+        choice: "Visit a Zoo/Aquarium",
+        value: "zooAquarium",
+      }
+    }
+  },
+  {
+    name: "question12",
+    upNext:"question13",
+    question: "I am very active and like to... (pick all that apply)",
+    answerChoices: {
+      one: {
+        choice: "Play Water Sports",
+        value: "watersports",
+      },
+      two: {
+        choice: "Go Horseback Riding",
+        value: "horsebackRiding",
+      },
+      three: {
+        choice: "Go On Hikes",
+        value: "hiking",
+      },
+      four: {
+        choice: "Fish",
+        value: "fishing",
+      }
+    }
+  },
+  {
+    name: "question13",
+    upNext:"EndOfQuiz",
+    question: "I am so adventurous and want to be able to go... (pick all that apply)",
+    answerChoices: {
+      one: {
+        choice: "Mountain Biking",
+        value: "mountainBiking",
+      },
+      two: {
+        choice: "Skiing",
+        value: "skiing",
+      },
+      three: {
+        choice: "Climbing",
+        value: "climbing",
+      },
+      four: {
+        choice: "Rafting",
+        value: "rafting",
+      }
+    }
   }
 
 
