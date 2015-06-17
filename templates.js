@@ -22,7 +22,8 @@ templates.placeMeResult = [
 "<li class='shopping'><%= shopping %></li>",
 "</ul>",
 "</div>",
-"</div>"
+"</div>",
+"<button type='button' class='cityLink' id='<%= name %>'><%= name %></button>"
 ].join("");
 
 templates.radioQuestion= [

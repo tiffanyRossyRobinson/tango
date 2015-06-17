@@ -190,7 +190,8 @@ var page ={
     }
     else if(page.selectedAnswer === 'yesSports' || page.selectedAnswer ===  'noSports'){
       page.yourObject['sports'] = page.selectedAnswer;
-      page.selectedAnswer = "";
+      page.selectedAnswer = "done";
+
     }
 
   },
@@ -346,7 +347,8 @@ var page ={
                 image : value.image
               };
 
-              console.log(firstCity);
+              console.log(page.firstCity);
+
             };
           });
 
