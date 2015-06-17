@@ -21,7 +21,6 @@ templates.placeMeResult = [
 "<li class='sports'><%= sports %></li>",
 "<li class='shopping'><%= shopping %></li>",
 "</ul>",
-"</div>",
 "</div>"
 ].join("");
 
