@@ -23,7 +23,7 @@ templates.placeMeResult = [
 "</ul>",
 "</div>",
 "</div>"
-].join();
+].join("");
 
 templates.radioQuestion= [
   "<div class='Option'><input type='radio' class='answerChoice' name = 'myChoice' value='<%= value %>'>&nbsp;&nbsp;&nbsp;<%= choice %></div>",

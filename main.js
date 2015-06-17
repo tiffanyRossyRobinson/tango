@@ -19,6 +19,10 @@ var page ={
   questionOn: "",
   selectedAnswer: "",
 
+  firstCity : {},
+  secondCity : {},
+  thirdCity : {},
+
 
   init:function(arguments){
     page.initStyling();
@@ -321,10 +325,10 @@ var page ={
     },
 
     displayResults: function(){
+
           _.map(cities, function(value){
             if(value.name === page.topOne){
-              var firstCity = {};
-              firstCity = {
+              page.firstCity = {
                 name : value.name,
                 score : page.scoreOne,
                 size : value.size,
@@ -336,13 +340,12 @@ var page ={
                 shopping : value.shopping,
                 image : value.image
               };
-              console.log(firstCity);
-            };
-            _.template("placeMeResult", firstCity, $('.topOne'))
-
-            if (value.name === page.second) {
-              var secondCity = {};
-              secondCity = {
+              console.log(page.firstCity);
+            }
+          });
+          _.map(cities, function(value){
+            if (value.name === page.topTwo) {
+              page.secondCity = {
                 name : value.name,
                 score : page.scoreTwo,
                 size : value.size,
@@ -354,12 +357,13 @@ var page ={
                 shopping : value.shopping,
                 image : value.image
               };
-            };
-            _.template("placeMeResult", secondCity, $('.second'))
+              console.log(page.secondCity);
+            }
+          });
 
-            if (value.name === page.third) {
-              var thirdCity = {};
-              thirdCity = {
+          _.map(cities, function(value){
+            if (value.name === page.topThree) {
+              page.thirdCity = {
                 name : value.name,
                 score : page.scoreThree,
                 size : value.size,
@@ -371,9 +375,12 @@ var page ={
                 shopping : value.shopping,
                 image : value.image
               };
+              console.log(page.thirdCity);
             };
-            _.template("placeMeResult", thirdCity, $('.third'))
-          })
+          });
+            page.loadTemplate("placeMeResult", page.firstCity, $('.topOne'));
+            page.loadTemplate("placeMeResult", page.secondCity, $('.topTwo'));
+            page.loadTemplate("placeMeResult", page.thirdCity, $('.topThree'));
        },
 
     loadTemplate: function (tmplName, data, $target) {
