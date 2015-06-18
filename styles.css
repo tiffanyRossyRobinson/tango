@@ -2,12 +2,12 @@
 .quizPage{
   display:none;
 }
+
 .yourInfo{
   margin-top: 3%;
   display: none;
   text-align: center;
 }
-
 
 .geography{
   margin-top: 2%;
@@ -21,11 +21,6 @@
 
 }
 
-/* body{
-  background: url('http://img.mi9.com/landscape/5005/beautiful-bridges-wallpaper-free-cooper-river-bridge_2560x1600_93607.jpg') center fixed;
-  background-size: cover;
-} */
-
 .quizPage{
   background-color: #A9DBFF;
   margin-top: 125px;
@@ -34,9 +29,6 @@
 }
 .quizPage h1{
   text-align: center;
-}
-.activities{
-  margin-top: 10%;
 }
 
 .pickSize, .pickClimate{
@@ -91,18 +83,18 @@
 }
 
 video#bgvid {
-position: fixed;
-top: 50%;
-left: 50%;
-min-width: 100%;
-min-height: 100%;
-width: auto;
-height: auto;
-z-index: -100;
--webkit-transform: translateX(-50%) translateY(-50%);
-transform: translateX(-50%) translateY(-50%);
-background: url('http://img.mi9.com/landscape/5005/beautiful-bridges-wallpaper-free-cooper-river-bridge_2560x1600_93607.jpg') no-repeat;
-background-size: cover;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url('http://img.mi9.com/landscape/5005/beautiful-bridges-wallpaper-free-cooper-river-bridge_2560x1600_93607.jpg') no-repeat;
+  background-size: cover;
 }
 
 .siteWrapper {
@@ -180,13 +172,6 @@ background-size: cover;
   height: 525px;
   width: 1050px;
   border: 2px solid #8588FF;
-  box-shadow: 1px 5px 22px 6px #003F6B
-}
-
-{
-  background-color: #A9DBFF;
-  margin-top: 125px;
-  border: 2px solid #8588FF;
   box-shadow: 1px 5px 22px 6px #003F6B;
 }
 
@@ -200,11 +185,6 @@ li{
   height: 500px;
   margin: auto;
 }
-
-/* #resultHeader{
-  width: 1000px;
-  height: 500px;
-} */
 
 h2{
   display: inline-flex;
@@ -238,16 +218,18 @@ h2{
   display: flex;
   padding: 35px;
   background-color: lightsalmon;
-  border: 2px solid #8588FF;
+  border: 2px solid #DD764D;
   box-shadow: 1px 5px 22px 6px #003F6B;
-
 }
 
-  .active {
-    display: block;
+.topThree .resultsContent{
+  margin-bottom: 50px;
+}
 
-  }
+.active {
+  display: block;
+}
 
-  .hide {
-    display: none;
-  }
+.hide {
+  display: none;
+}
