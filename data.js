@@ -178,7 +178,7 @@ questions=[
     question: "What best describes your personality?",
     answerChoices: {
       one:{
-        choice: "I love being around People!",
+        choice: "I love being around people!",
         value: "large",
       },
       two: {
@@ -218,11 +218,11 @@ questions=[
         value: "mediterranean",
       },
       two: {
-        choice: "Subtropical (dry summer)",
+        choice: "Subtropical (Dry Summer)",
         value: "drySummerSubtropical",
       },
       three: {
-        choice: "Continental (dry summer)",
+        choice: "Continental (Dry Summer)",
         value: "drySummerContinental"
       }
     }
@@ -239,6 +239,10 @@ questions=[
       two: {
         choice: "Semi-Arid",
         value: "semiarid",
+      },
+      three: {
+        choice: "Humid Continental (Cool Summer)",
+        value: "coolSummer",
       }
     }
   },
@@ -248,7 +252,7 @@ questions=[
     question: "I would like an environment that is: ",
     answerChoices: {
       one: {
-        choice: "Humid Continental (warm Summer)",
+        choice: "Humid Continental (Warm Summer)",
         value: "warmSummer",
       },
       two: {
@@ -279,10 +283,10 @@ questions=[
   {
     name: "question4",
     upNext:"question5",
-    question: "Having good Shopping nearby is very important to me!",
+    question: "Having good shopping nearby is very important to me!",
     answerChoices: {
       one: {
-        choice: "Uh Yes! I love to Shop!",
+        choice: "Uh Yes! I love to shop!",
         value: "yesShop",
       },
       two: {
@@ -301,7 +305,7 @@ questions=[
         value: "yesSports",
       },
       two: {
-        choice: "My wife doesnt approve...",
+        choice: "My wife doesn't approve...",
         value: "noSports",
       }
     }
@@ -312,15 +316,15 @@ questions=[
     question: "I like water so I want to be near... (pick all that apply)",
     answerChoices: {
       one: {
-        choice: "A Beach",
+        choice: "A beach",
         value: "beach",
       },
       two: {
-        choice: "A River",
+        choice: "A river",
         value: "river",
       },
       three: {
-        choice: "An Ocean",
+        choice: "An ocean",
         value: "ocean",
       }
     }
@@ -350,15 +354,15 @@ questions=[
     question: "Send me to a place that has... (pick all that apply)",
     answerChoices: {
       one: {
-        choice: "A Forest",
+        choice: "A forest",
         value: "forest",
       },
       two: {
-        choice: "A Lake",
+        choice: "A lake",
         value: "lake",
       },
       three: {
-        choice: "A Bay",
+        choice: "A bay",
         value: "bay",
       }
     }
@@ -369,15 +373,15 @@ questions=[
     question: "It would be cool to live in ... (pick all that apply)",
     answerChoices: {
       one: {
-        choice: "A Desert",
+        choice: "A desert",
         value: "desert",
       },
       two: {
-        choice: "A City with Plains",
+        choice: "A city in the plains",
         value: "plains",
       },
       three: {
-        choice: "A Place with Valleys",
+        choice: "A place with valleys",
         value: "valleys",
       }
     }
@@ -388,19 +392,19 @@ questions=[
     question: "I want to be able to go... (pick all that apply)",
     answerChoices: {
       one: {
-        choice: "To Parks to play!",
+        choice: "To parks to play!",
         value: "parks",
       },
       two: {
-        choice: "To Museums to see things",
+        choice: "To museums to see things",
         value: "museums",
       },
       three: {
-        choice: "To a Theater to watch stuff",
+        choice: "To a theater to watch musicals",
         value: "theater",
       },
       four: {
-        choice: "On Tours to see thing",
+        choice: "On tours to see historic sites",
         value: "tours",
       }
     }
@@ -408,22 +412,22 @@ questions=[
   {
     name: "question11",
     upNext:"question12",
-    question: "On my spare time I like to... (pick all that apply)",
+    question: "In my spare time I like to... (pick all that apply)",
     answerChoices: {
       one: {
-        choice: "Go To Amusement Parks",
+        choice: "Go to amusement parks",
         value: "amusementParks",
       },
       two: {
-        choice: "Go Swimming",
+        choice: "Go swimming",
         value: "swimming",
       },
       three: {
-        choice: "Be able to Surf",
+        choice: "Be able to surf",
         value: "surfing",
       },
       four: {
-        choice: "Visit a Zoo/Aquarium",
+        choice: "Visit a zoo or aquarium",
         value: "zooAquarium",
       }
     }
@@ -434,15 +438,15 @@ questions=[
     question: "I am very active and like to... (pick all that apply)",
     answerChoices: {
       one: {
-        choice: "Play Water Sports",
+        choice: "Play water sports or go boating",
         value: "watersports",
       },
       two: {
-        choice: "Go Horseback Riding",
+        choice: "Go horseback riding",
         value: "horsebackRiding",
       },
       three: {
-        choice: "Go On Hikes",
+        choice: "Go on hikes",
         value: "hiking",
       },
       four: {
@@ -457,7 +461,7 @@ questions=[
     question: "I am so adventurous and want to be able to go... (pick all that apply)",
     answerChoices: {
       one: {
-        choice: "Mountain Biking",
+        choice: "Mountain biking",
         value: "mountainBiking",
       },
       two: {

@@ -27,7 +27,7 @@ templates.radioQuestion= [
 ].join();
 
 templates.checkQuestion= [
-  "<div class='Option'><input type='checkbox' class='answerChoice' name='myChecks' value='<%= value %>'><%= choice %></div>",
+  "<div class='Option'><input type='checkbox' class='answerChoice' name='myChecks' value='<%= value %>'>&nbsp;&nbsp;&nbsp;<%= choice %></div>",
 ].join();
 
 

@@ -175,7 +175,7 @@ var page ={
       page.selectedAnswer = "";
 
     }
-    else if(page.selectedAnswer === 'warmSummer' || page.selectedAnswer ===  'hotDesert' || page.selectedAnswer === 'humidSubtropical' || page.selectedAnswer === 'drySummersubtropical' || page.selectedAnswer === 'drySummerContinental' || page.selectedAnswer === 'alpine' || page.selectedAnswer === 'semiarid'){
+    else if(page.selectedAnswer === 'warmSummer' || page.selectedAnswer ===  'hotDesert' || page.selectedAnswer === 'humidSubtropical' || page.selectedAnswer === 'drySummersubtropical' || page.selectedAnswer === 'drySummerContinental' || page.selectedAnswer === 'alpine' || page.selectedAnswer === 'semiarid' || page.selectedAnswer ===  'coolSummer'){
       page.yourObject['climate'] = page.selectedAnswer;
       page.selectedAnswer = "";
     }
