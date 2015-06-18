@@ -234,6 +234,7 @@ h2{
 }
 
 .resultsContent{
+  display: flex;
   padding: 35px;
   background-color: lightsalmon;
   border: 2px solid #8588FF;
