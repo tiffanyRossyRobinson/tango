@@ -191,7 +191,7 @@ background-size: cover;
 }
 
   /*///  Results Page   ///*/
-ul li{
+li{
     text-decoration: none;
 }
 
@@ -200,6 +200,44 @@ ul li{
   height: 500px;
 }
 
+/* #resultHeader{
+  width: 1000px;
+  height: 500px;
+} */
+
+h2{
+  display: inline-flex;
+  justify-content: space-between;
+  padding: 5px;
+
+}
+
+/* RESULTS IMAGE */
+.col-md-7{
+  overflow: hidden;
+}
+.col-md-7 img{
+  width: 100%;
+}
+
+/* RESULTS TEXT */
+.col-md-5{
+
+}
+.col-md-5 ul li{
+  text-decoration: none;
+}
+
+
+.resultHeader{
+  margin-top: 30px;
+}
+
+.resultsContent{
+  padding: 35px;
+  background-color: lightsalmon;
+
+}
 
   .active {
     display: block;
