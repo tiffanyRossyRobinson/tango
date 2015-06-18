@@ -168,6 +168,176 @@ cities = [
   }
 ];
 
+var formattedCities = [];
+
+formattedCities = [
+  {
+    name: "New York, NY",
+    size: "This is a very large city.",
+    activities: "New York has: parks, museums, theaters, tours, and amusement parks nearby",
+    food: "This city has excellent food options.",
+    climate: "The climate is continental (warm summer)",
+    geography: "The surrounding area has beaches, rivers, forest, and the Atlantic Ocean.",
+    sports: "There are professional sports.  Go Yankees!",
+    shopping: "New York has superior shopping.",
+    image: "http://media-cdn.tripadvisor.com/media/photo-s/03/9b/2d/f2/new-york-city.jpg"
+  },
+  {
+    name: "Los Angeles, CA",
+    size: "This is a very large city.",
+    activities: "Los Angeles has: amusement parks, museums, tours, swimming, and surfing.",
+    food: "This city has excellent food options.",
+    climate: "The climate is Mediterranean",
+    geography: "The surrounding area has a beaches, mountains, canyons, hills, and the Pacific Ocean.",
+    sports: "There are professional sports.  Go Clippers!",
+    shopping: "Los Angeles has excellent shopping.",
+    image: "http://images.fineartamerica.com/images-medium-large/los-angeles-skyline-neil-kremer.jpg"
+  },
+  {
+    name: "Chicago, IL",
+    size: "This is a very large city.",
+    activities: "Chicago has: parks, a zoo, an aquarium, museums, water sports, and tours.",
+    food: "This city has excellent food options.",
+    climate: "The climate is continental (warm summer)",
+    geography: "The surrounding area has a lake, rivers, forest, and beaches.",
+    sports: "There are professional sports. Da Bears!",
+    shopping: "Chicago has superior shopping.  Hello Magnificent Mile!",
+    image: "http://www.thepinnaclelist.com/wp-content/uploads/2013/08/002-high-hopes-for-luxury-rentals-in-america-windy-city-as-chicago-expects-3600-new-rental-units-by-2014-the-pinnacle-list-tpl-1840-600x375.jpg"
+  },
+  {
+    name: "Phoenix, AZ",
+    size: "This is a large city.",
+    activities: "Phoenix has: horseback riding, hiking, museums, tours, and theaters.",
+    food: "There is not a very good food scene.",
+    climate: "The climate is hot desert.",
+    geography: "The surrounding area has mountains and a desert.",
+    sports: "There are professional sports. Go Cardinals!",
+    shopping: "Phoenix has excellent shopping.",
+    image: "https://c1.staticflickr.com/5/4153/4844939786_17c9c8c9da_b.jpg"
+  },
+  {
+    name: "Dallas, TX",
+    size: "This is a large city.",
+    activities: "Dallas has: museums, tours, a zoo and aquarium, parks, and watersports.",
+    food: "This city has excellent food options.",
+    climate: "The climate is Humid Subtropical",
+    geography: "The surrounding area has lakes and plains.",
+    sports: "There are professional sports.  The Cowboys, America's team!",
+    shopping: "Dallas has excellent shopping.",
+    image: "http://img2.10bestmedia.com/Images/Photos/283771/Dallas-----Ultima-Gaina-iStock_54_990x660.jpg"
+  },
+  {
+    name: "Charleston, SC",
+    size: "This is a medium sized city.",
+    activities: "Charleston has: swimming, parks, tours, water sports, boating, and fishing.",
+    food: "This city has excellent food options.",
+    climate: "The climate is Humid Subtropical",
+    geography: "The surrounding area has beaches, rivers, forest, and the Altantic Ocean.",
+    sports: "There are no professional sports here.  Hope you like minor league!",
+    shopping: "Charleston has excellent shopping.",
+    image: "http://www.vanessak.com/CharlestonAerials/Aerial-Photography/Historic-Charleston-SC/i-85Nb4BV/0/L/DSC_3050-2-L.jpg"
+  },
+  {
+    name: "Eugene, OR",
+    size: "This ia a medium sized city.",
+    activities: "Eugene has: mountain biking, hiking, tours, museums, and fishing.",
+    food: "This city has a great food scene.",
+    climate: "The climate is Subtropical (dry summer).",
+    geography: "The surrounding area has rivers, valleys, mountains, and forest.",
+    sports: "There are no professional sports here.  Hope you like college!",
+    shopping: "There aren't very many good places to shop.",
+    image: "http://oregonbachfestival.com/uploads/images/obf-festival-main/plan%20your%20visit%20-Eugene-Skyline-by-UpShotz.jpg"
+  },
+  {
+    name: "Salt Lake City, UT",
+    size: "This is a medium sized city",
+    activities: "Salt Lake City has: skiing, hiking, mountain biking, museums, and watersports.",
+    food: "This city has excellent food options.",
+    climate: "The climate is continental (dry summer)",
+    geography: "The surrounding area has mountains, a lake, canyons, and rivers.",
+    sports: "There are professional sports.  Go Jazz!",
+    shopping: "Salt Lake City has excellent shopping.",
+    image: "http://ogdenbicyclecouncil.com/scenictour/wp-content/uploads/ISLC2259_Doug-Pulsipher.jpg"
+  },
+  {
+    name: "El Paso, TX",
+    size: "This is a medium sized city.",
+    activities: "El Paso has: hiking, mountain biking, museums, climbing, and a zoo.",
+    food: "There is excellent Mexican food here!",
+    climate: "The climate is hot desert.",
+    geography: "The surrounding area has desert, mountains, and a river.",
+    sports: "There are no professional sports.  Hope you like college!",
+    shopping: "There is excellent shopping here.",
+    image: "http://static.wixstatic.com/media/3b53f5_3dbf8868d019484da33de23a33a832c1.jpg"
+  },
+  {
+    name: "Cincinnati, OH",
+    size: "This is a medium sized city.",
+    activities: "Cincinnati has: a zoo, an aquarium, museums, theaters, parks, and amusement parks.",
+    food: "This city does not have good food.  Ever heard of Cincinnati chili?",
+    climate: "The climate is continental (warm summer)",
+    geography: "The surrounding area has: hills, a river, and forest.",
+    sports: "There are professional sports.  Go Reds!",
+    shopping: "There aren't many good places to shop.",
+    image: "http://www.alsglobal.com/~/media/Images/Divisions/Life%20Sciences/Environmental/Cincinnati.jpg"
+  },
+  {
+    name: "Northfield, MN",
+    size: "This is a small town.",
+    activities: "Northfield has: mountain biking, museums, fishing, and hiking.",
+    food: "This city does not have a good food scene.",
+    climate: "The climate is continental (cool summer)",
+    geography: "The surrounding area has: rivers and forest.",
+    sports: "There are not professional sports.",
+    shopping: "There aren't many good places to shop.",
+    image: "http://nddc.org/i/f/2010/11/Downtown_Northfield_Shopping_District.jpg"
+  },
+  {
+    name: "Lebanon, NH",
+    size: "This is a small town.",
+    activities: "Lebanon has: theater, fishing, and hiking.",
+    food: "This city does not have very many food options.",
+    climate: "The climate is continental (cool summer)",
+    geography: "The surrounding area has: rivers, forest, and hills.",
+    sports: "There are not professional sports.",
+    shopping: "There aren't many good places to shop.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/24/Downtown_Lebanon_5.JPG"
+  },
+  {
+    name: "Hood River, OR",
+    size: "This is a small town.",
+    activities: "Hood River has: hiking, fishing, mountain biking, and rafting.",
+    food: "This city does not have a good food scene.",
+    climate: "The climate is alpine.",
+    geography: "The surrounding area has: mountains, forest, and a river.",
+    sports: "There are no professional sports.",
+    shopping: "There aren't many good places to shop.",
+    image: "http://www.farmstandgorge.com/uploads/_HoodRiver_best.jpg"
+  },
+  {
+    name: "Port Angeles, WA",
+    size: "This is a small town.",
+    activities: "Port Angeles has: hiking, mountain biking, fishing, rafting, and water sports.",
+    food: "This city does not have very many food options.",
+    climate: "The climate is subtropical (dry summer)",
+    geography: "The surrounding area has: mountains, forest, a bay, and the Atlantic Ocean.",
+    sports: "There are no professional sports.",
+    shopping: "There aren't many good places to shop.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/7c/Portangeles_washington.jpg"
+  },
+  {
+    name: "Spearfish, SD",
+    size: "This is a small town.",
+    activities: "Spearfish has: a wildlife sancuary, fishing, hiking, and museums.",
+    food: "This city does not have a good food scene.",
+    climate: "The climate is semi-arid",
+    geography: "The surrounding area has: forest, hills, a river, and canyons.",
+    sports: "There are no professional sports.",
+    shopping: "There aren't many good places to shop.",
+    image: "http://i1277.photobucket.com/albums/y483/vremeax/Spearfish_apus_zps04e68cfb.jpg~original"
+  }
+];
+
 
 var questions=[];
 

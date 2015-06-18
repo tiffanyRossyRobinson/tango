@@ -332,7 +332,7 @@ var page ={
     displayResults: function(){
 
 
-          _.map(cities, function(value){
+          _.map(formattedCities, function(value){
             if(value.name === page.topOne){
               page.firstCity = {
                 name : value.name,
@@ -352,7 +352,7 @@ var page ={
             };
           });
 
-          _.map(cities, function(value){
+          _.map(formattedCities, function(value){
             if (value.name === page.topTwo) {
               page.secondCity = {
                 name : value.name,
@@ -370,7 +370,7 @@ var page ={
             }
           });
 
-          _.map(cities, function(value){
+          _.map(formattedCities, function(value){
             if (value.name === page.topThree) {
               page.thirdCity = {
                 name : value.name,

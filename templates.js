@@ -11,7 +11,6 @@ templates.placeMeResult = [
 "<img src=<%= image %> alt='' />",
 "</div>",
 "<div id='resultsText'class='col-md-5'>",
-"<p class='name'><%= name %></p>",
 "<p class='size'><%= size %></p>",
 "<p class='activities'><%= activities %></p>",
 "<p class='food'><%= food %></p>",
