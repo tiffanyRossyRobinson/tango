@@ -39,6 +39,7 @@ var page ={
     $('.next').on('click', page.nextQuestion);
     $('.selectAnswer').on('click', 'input[type=radio]', page.selectChoice);
     $('.selectAnswer').on('click', 'input[type=checkbox]', page.addChecks);
+    $('#logo').on('click', page.reload);
   },
 
   openQuiz: function(){
@@ -433,6 +434,10 @@ var page ={
         }
       });
       }
+    },
+
+    reload: function() {
+      location.reload();
     }
 
 };
